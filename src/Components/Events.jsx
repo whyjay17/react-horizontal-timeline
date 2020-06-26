@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactHover from 'react-hover'
 
 import { cummulativeSeperation } from '../helpers';
 import TimelineDot from './TimelineDot';
+
+const optionsCursorTrueWithMargin = {
+  followCursor: true,
+  shiftX: -300,
+  shiftY: -50
+}
 
 /**
  * The markup Information for all the events on the horizontal timeline.
@@ -18,17 +25,25 @@ const EventsBar = ({ events, selectedIndex, styles, handleDateClick, labelWidth 
     }}
   >
     {events.map((event, index) =>
-      <TimelineDot
-        distanceFromOrigin={event.distance}
-        label={event.label}
-        date={event.date}
-        index={index}
-        key={index}
-        onClick={handleDateClick}
-        selected={selectedIndex}
-        styles={styles}
-        labelWidth={labelWidth}
-      />
+    
+      <ReactHover options={optionsCursorTrueWithMargin}>
+        <ReactHover.Trigger type='trigger'>
+          <TimelineDot
+            distanceFromOrigin={event.distance}
+            label={event.label}
+            date={event.date}
+            index={index}
+            key={index}
+            onClick={handleDateClick}
+            selected={selectedIndex}
+            styles={styles}
+            labelWidth={labelWidth}
+          />
+        </ReactHover.Trigger>
+        <ReactHover.Hover type='hover'>
+          {event.hoverContents}
+        </ReactHover.Hover>
+      </ReactHover>
     )}
   </ol>
 );

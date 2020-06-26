@@ -39,10 +39,12 @@ export default class HorizontalTimelineContent extends React.Component {
 
   componentWillMount() {
     this.dates = this.props.content.map((entry) => entry.date);
+    this.hoverContents = this.props.content.map((entry) => entry.hoverContents);
   }
 
   componentWillReceiveProps(nextProps) {
     this.dates = nextProps.content.map((entry) => entry.date);
+    this.hoverContents = this.props.content.map((entry) => entry.hoverContents);
   }
 
   render() {
@@ -91,6 +93,7 @@ export default class HorizontalTimelineContent extends React.Component {
               outline: state.stylesOutline
             }}
             values={ this.dates }
+            hoverContents = { this.hoverContents }
             isOpenEnding={state.isOpenEnding}
             isOpenBeginning={state.isOpenBeginning}
           />

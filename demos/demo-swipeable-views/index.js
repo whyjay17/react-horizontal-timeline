@@ -18,6 +18,7 @@ class App extends React.Component {
     this.data = GameInfo.map((game, index) => {
       return ({
         date: game.date,
+        hoverContents: game.hoverContent,
         component: (
           <div className='container' key={index}>
             <h1>{ `The Elder Scrolls ${index + 1}:`}</h1>

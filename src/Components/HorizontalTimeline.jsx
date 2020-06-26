@@ -29,7 +29,6 @@ class HorizontalTimeline extends React.Component {
 
   render() {
     const props = this.props;
-
     if (!props.containerWidth) {
       //As long as we do not know the width of our container, do not render anything!
       return false;
@@ -51,6 +50,7 @@ class HorizontalTimeline extends React.Component {
       distance,
       label: props.getLabel(props.values[index], index),
       date: props.values[index],
+      hoverContents: props.hoverContents[index]
     }));
 
     const visibleWidth = this.props.containerWidth - 80;

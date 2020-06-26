@@ -8,12 +8,13 @@ const S5 = 'In August 2010, Todd Howard revealed Bethesda were currently working
 
 module.exports = [
   {
-    date: '01/01/1994',
+    date: '02/01/1994',
     avatarURL: 'https://upload.wikimedia.org/wikipedia/en/8/89/Elder_Scrolls_Arena_Cover.jpg',
     photo: './the_elder_scrolls_1_arena_wallpaper_by_thejackmoriarty-d8mlpzc.png',
     title: 'The Elder Scrolls: 1',
     subtitle: 'Arena',
-    content: S1
+    content: S1,
+    hoverContent: '<div>'
   },
   {
     date: '08/31/1996',
@@ -21,7 +22,8 @@ module.exports = [
     photo: 'https://images6.alphacoders.com/599/599052.jpg',
     title: 'The Elder Scrolls: 2',
     subtitle: 'Daggerfall',
-    content: S2
+    content: S2,
+    hoverContent: 'wow2'
   },
   {
     date: '05/02/2002',
@@ -29,7 +31,8 @@ module.exports = [
     photo: 'http://elder-scrolls.com/uploads/posts/2013-11/1384956239_m43.jpg',
     title: 'The Elder Scrolls: 3',
     subtitle: 'Morrowind',
-    content: S3
+    content: S3,
+    hoverContent: 'wow3'
   },
   {
     date: '03/20/2006',
@@ -37,7 +40,8 @@ module.exports = [
     photo: 'https://images8.alphacoders.com/410/410161.jpg',
     title: 'The Elder Scrolls: 4',
     subtitle: 'Oblivion',
-    content: S4
+    content: S4,
+    hoverContent: 'wow4'
   },
   {
     date: '11/11/2011',
@@ -45,6 +49,7 @@ module.exports = [
     photo: 'http://wallpapercave.com/wp/GMifnUB.jpg',
     title: 'The Elder Scrolls: 5',
     subtitle: 'Skyrim',
-    content: S5
+    content: S5,
+    hoverContent: 'wow5'
   }
 ];

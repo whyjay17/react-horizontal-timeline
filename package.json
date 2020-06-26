@@ -33,7 +33,10 @@
     "color": "^3.0.0",
     "prop-types": "^15.6.0",
     "radium": "^0.25.0",
+    "react": "^16.13.1",
     "react-dimensions": "2.0.0-alpha2",
+    "react-dom": "^16.13.1",
+    "react-hover": "^1.4.0",
     "react-icons": "^3.1.0",
     "react-motion": "^0.5.0"
   },
